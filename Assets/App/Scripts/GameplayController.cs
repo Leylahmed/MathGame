@@ -52,7 +52,7 @@ public class GameplayController : MonoBehaviour
 
     public void onCleanTextButtonPressed()
     {
-        answerText.text = "Enter text...";
+        answerText.text = "enter your answer...";
         isClean = false;
     }
 
@@ -63,7 +63,7 @@ public class GameplayController : MonoBehaviour
 
     public void onNextLevelButtonPressed()
     {
-        if (checkText.text == "TRUE" && _levelIndex > 9)
+        if (checkText.text == "TRUE" && _levelIndex < 9)
         {
             PlayerPrefs.SetInt("LevelIndex", _levelIndex + 1);
             SceneManager.LoadScene("GameplayScene");
